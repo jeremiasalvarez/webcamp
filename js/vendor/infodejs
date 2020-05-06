@@ -8,4 +8,4 @@ ecmascript => reglas que el lenguaje sigue
 
 es6 (2015) => nuevo estandar
 
-es7,es8,es9 => no dejan obsoleta a las anteriores, agregan nuevas funciones. no son soportadas al 100% por todos los navegadores. se puede transpilar el codigo para mejorar su soporte (similar a compilar)
+es7,es8,es9 => no dejan obsoleta a las anteriores, agregan nuevagits funciones. no son soportadas al 100% por todos los navegadores. se puede transpilar el codigo para mejorar su soporte (similar a compilar)asdad

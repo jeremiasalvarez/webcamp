@@ -1,0 +1,225 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="icon.png">
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="stylesheet" href="css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Oswald:wght@200;300;400;500;600;700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+    <!--[if IE]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+
+    <header class="site-header">
+        <div class="hero">
+            <div class="contenido-header">
+                <nav class="redes-sociales">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </nav>
+
+                <div class="informacion-evento">
+
+                    <div class="clearfix">
+                        <p class="fecha"><i class="fas fa-calendar-alt"></i> 10-12-Dic
+                        </p>
+                        <p class="ciudad"><i class="fas fa-map-marker-alt"></i>Guadalajara, MX</p>
+                    </div>
+
+
+
+                    <h1 class="nombre-sitio">GldWebCamp</h1>
+                    <p class="slogan">La mejor Conferencia de <span>Diseño Web</span></p>
+                </div>
+
+
+            </div>
+        </div>
+        <!--hero-->
+    </header>
+
+    <div class="barra">
+        <div class="contenedor clearfix">
+            <div class="logo"><img src="img/logo.svg" alt="logo">
+            </div>
+            <div class="menu-movil">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="navegacion-principal">
+                <a href="#">Conferencia</a>
+                <a href="#">Calendario</a>
+                <a href="#">Invitados</a>
+                <a href="registro.html">Reservaciones</a>
+            </nav>
+        </div>
+    </div>
+
+    <section class="seccion contenedor">
+        <h2>Registro de Usuarios</h2>
+        <form id="registro" class="registro" action="index.html" method="post">
+            <div class="registro caja clearfix" id="datos_usuario">
+                <div class="campo">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" name="nombre" id="nombre" placeholder="Tu Nombre">
+                </div>
+                <div class="campo">
+                    <label for="apellido">Apellido:</label>
+                    <input type="text" name="apellido" id="apellido" placeholder="Tu Apellido">
+                </div>
+                <div class="campo">
+                    <label for="email">Email: </label>
+                    <input type="email" name="email" id="email" placeholder="Tu Correo Electronico">
+                </div>
+
+                <div class="" id="error"></div>
+            </div>
+
+            <div class="paquetes" id="paquetes">
+                <h3>Elige el numero de boletos</h3>
+
+                <ul class="lista-precios clearfix">
+                    <li>
+                        <div class="tabla-precio">
+                            <h3>Pase por dia (viernes)</h3>
+                            <p class="numero">$30</p>
+                            <ul>
+                                <li>Bocadillos gratis</li>
+                                <li>Todas las conferencias</li>
+                                <li>Todos los talleres</li>
+
+                            </ul>
+                            <div class="orden">
+                                <label for="pase_dia">Boletos Deseados</label>
+                                <input type="number" min="0" placeholder="0" size="3" id="pase_dia">
+                            </div>
+
+                        </div>
+                    </li>
+                    <li>
+                        <div class="tabla-precio">
+                            <h3>Todos los dias</h3>
+                            <p class="numero">$50</p>
+                            <ul>
+                                <li>Bocadillos gratis</li>
+                                <li>Todas las conferencias</li>
+                                <li>Todos los talleres</li>
+
+                            </ul>
+
+                            <div class="orden">
+                                <label for="pase_completo">Boletos Deseados</label>
+                                <input type="number" min="0" placeholder="0" size="3" id="pase_completo">
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="tabla-precio">
+                            <h3>Pase por 2 dias (viernes y sabado)</h3>
+                            <p class="numero">$45</p>
+                            <ul>
+                                <li>Bocadillos gratis</li>
+                                <li>Todas las conferencias</li>
+                                <li>Todos los talleres</li>
+
+                            </ul>
+
+                            <div class="orden">
+                                <label for="pase_2_dias">Boletos Deseados</label>
+                                <input type="number" min="0" placeholder="0" size="3" id="pase_2_dias">
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+
+            </div>
+        </form>
+    </section>
+
+
+    <footer class="site-footer">
+        <div class="contenedor clearfix">
+            <div class="footer-informacion">
+                <h3>Sobre <span>GldWebCamp</span></h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis quidem deserunt quibusdam, consequuntur temporibus eos quo praesentium! Dicta id veniam est asperiores aliquid eaque </p>
+            </div>
+            <div class="ultimos-tweets">
+                <h3>Ultimos <span>Tweets</span></h3>
+                <ul>
+                    <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam consectetur, fuga dolore veritatis quibusdam, blanditiis quia a dicta voluptatem reprehenderit magnam laborum! Reprehenderit eveniet neque sint exercitationem. Rem, velit
+                        quaerat.
+                    </li>
+                    <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad iure, mollitia neque quo delectus expedita atque optio corporis aliquid labore nisi saepe, omnis, explicabo laboriosam nobis harum cumque distinctio numquam!</li>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, officiis. Quidem minima nisi autem voluptatum facere sed. Et quibusdam ipsam harum facere sequi laborum nam ea est voluptatem. Sequi, dolorem.</li>
+                </ul>
+            </div>
+            <div class="menu">
+                <h3>Redes<span> Sociales</span></h3>
+                <nav class="redes-sociales">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </nav>
+            </div>
+        </div>
+
+        <p class="copyright">Todos los Derechos Reservados GLDWEBCAMP 2020</p>
+
+
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="js/vendor/modernizr-3.8.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script>
+        window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')
+    </script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+
+    <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+    <script>
+        window.ga = function() {
+            ga.q.push(arguments)
+        };
+        ga.q = [];
+        ga.l = +new Date;
+        ga('create', 'UA-XXXXX-Y', 'auto');
+        ga('set', 'transport', 'beacon');
+        ga('send', 'pageview')
+    </script>
+    <script src="https://www.google-analytics.com/analytics.js" async></script>
+</body>
+
+</html>
