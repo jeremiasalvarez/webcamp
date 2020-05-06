@@ -1,0 +1,11 @@
+=> javascript es un lenguaje de scripting, no se compila.
+
+=>se ejecuta en el navegador.
+
+=>todos los navegadores lo soportan.
+
+ecmascript => reglas que el lenguaje sigue
+
+es6 (2015) => nuevo estandar
+
+es7,es8,es9 => no dejan obsoleta a las anteriores, agregan nuevas funciones. no son soportadas al 100% por todos los navegadores. se puede transpilar el codigo para mejorar su soporte (similar a compilar)
