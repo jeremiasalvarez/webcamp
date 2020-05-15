@@ -692,7 +692,7 @@ p.numero {
 /*mapa*/
 
 .mapa {
-    height: 120px;
+    height: 350px;
     width: 100%;
     background-color: green;
 }
@@ -868,6 +868,18 @@ p.copyright {
     color: white;
     text-align: center;
     margin: 20px 0 0 0;
+}
+
+#viernes,
+#sabado,
+#domingo,
+#eventos {
+    display: none;
+}
+
+#error {
+    display: none;
+    border: 1px solid rgb(190, 20, 20);
 }
 
 
