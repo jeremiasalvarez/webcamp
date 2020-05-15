@@ -1,4 +1,4 @@
-//prueba
+//prueba 2
 //Mapa
 const map = L.map('mapa').setView([20.6736, -103.344], 20);
 
