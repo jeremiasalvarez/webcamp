@@ -467,6 +467,22 @@ section.programa {
     font-family: "Oswald", sans-serif;
     margin-bottom: 10px;
     font-size: 1.2em;
+    position: relative;
+}
+
+.menu-programa a.activo::after {
+    position: absolute;
+    content: '';
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    top: 115%;
+    bottom: -50;
+    left: 50%;
+    right: 50%;
+    background-image: url('../img/talleres-flecha.jpg');
+    background-position: top center;
+    background-size: cover;
 }
 
 .menu-programa a i,

@@ -1,8 +1,5 @@
 //Campos datos de usuario
 
-const c = $('.menu');
-c.addClass('hola hola2');
-console.log(c);
 
 let nombre = document.getElementById('nombre');
 
