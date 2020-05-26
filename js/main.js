@@ -31,8 +31,22 @@ const numTalleres = $('#num_talleres');
 const numInvitados = $('#num_invitados');
 const numConferencias = $('#num_conferencias');
 
-numTalleres.animateNumber()
+numTalleres.animateNumber({ number: 15 }, 2000);
+numDias.animateNumber({ number: 3 }, 2000);
+numInvitados.animateNumber({ number: 6 }, 2000);
+numConferencias.animateNumber({ number: 10 }, 2000);
 
+//Cuenta regresiva
+const diasRestantes = $('#faltan_dias');
+const horasRestantes = $('#faltan_horas');
+const minutosRestantes = $('#faltan_minutos');
+const segundosRestantes = $('#faltan_segundos');
+const cuentaRegresiva = $('.cuenta-regresiva');
+
+
+$('.cuenta-regresiva').countdown('2020/5/28 10:00:00', (event) => {
+    diasRestantes.html(event.strftime('%D'));
+});
 
 
 //Mapa
