@@ -305,6 +305,14 @@ h1.nombre-sitio {
     }
 }
 
+
+/* lettering */
+
+.nombre-sitio span {
+    position: relative;
+    text-shadow: 0 0 30px black;
+}
+
 p.slogan {
     text-transform: none!important;
 }
@@ -319,6 +327,14 @@ p.slogan span {
 div.barra {
     background-color: #353535;
     padding: 20px 0;
+}
+
+.fixed {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
 }
 
 div.logo {
@@ -341,6 +357,7 @@ div.logo img {
 
 nav.navegacion-principal {
     display: none;
+    width: 100%;
 }
 
 nav.navegacion-principal a {
@@ -1036,6 +1053,31 @@ h4 {
     text-align: center;
     font-size: 2em;
     color: #f34918;
+}
+
+
+/* Conferencia */
+
+.galeria {
+    margin-bottom: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.galeria a {
+    margin-bottom: 10px;
+}
+
+.galeria a img {
+    transition: all .3s ease;
+}
+
+.galeria a:hover img {
+    cursor: pointer;
+    filter: grayscale(0.5);
+    transform: scale(1.1);
 }
 
 

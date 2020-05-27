@@ -1,3 +1,36 @@
+//Lettering
+
+const titulo = $('.nombre-sitio');
+
+titulo.lettering();
+
+
+//scrolling
+
+const documentWindow = $(window);
+const windowHeight = documentWindow.height();
+
+documentWindow.scroll(() => {
+    const navHeight = $('.barra').innerHeight();
+    let scroll = documentWindow.scrollTop();
+
+    if (scroll > windowHeight) {
+        $('.barra').addClass('fixed');
+        $('body').css('margin-top', `${navHeight}px`);
+    } else {
+        $('.barra').removeClass('fixed');
+        $('body').css('margin-top', '0px');
+    }
+});
+
+//menu hamburguesa
+
+const botonMenu = $('.menu-movil');
+
+botonMenu.click(() => {
+    $('.navegacion-principal').slideToggle();
+})
+
 //Talleres, Seminarios y Conferencias
 
 const elementosNav = $('.menu-programa a');
@@ -42,10 +75,13 @@ const horasRestantes = $('#faltan_horas');
 const minutosRestantes = $('#faltan_minutos');
 const segundosRestantes = $('#faltan_segundos');
 const cuentaRegresiva = $('.cuenta-regresiva');
+const date = '2020/12/20 10:00:00';
 
-
-$('.cuenta-regresiva').countdown('2020/5/28 10:00:00', (event) => {
+cuentaRegresiva.countdown(date, (event) => {
     diasRestantes.html(event.strftime('%D'));
+    minutosRestantes.html(event.strftime('%M'));
+    segundosRestantes.html(event.strftime('%S'));
+    horasRestantes.html(event.strftime('%H'));
 });
 
 
