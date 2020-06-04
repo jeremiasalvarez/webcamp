@@ -58,7 +58,7 @@
                         </p>
                     </div>
 
-                    <a href="#" class="button float-right">Ver todos</a>
+                    <a href="calendario.php" class="button float-right">Ver todos</a>
                 </div>
                 <div id="conferencias" class="info-curso ocultar clearfix">
                     <div class="detalle-evento">
@@ -87,7 +87,7 @@
                         </p>
                     </div>
 
-                    <a href="#" class="button float-right">Ver todos</a>
+                    <a href="calendario.php" class="button float-right">Ver todos</a>
                 </div>
                 <div id="seminarios" class="info-curso ocultar clearfix">
                     <div class="detalle-evento">
@@ -116,7 +116,7 @@
                         </p>
                     </div>
 
-                    <a href="#" class="button float-right">Ver todos</a>
+                    <a href="calendario.php" class="button float-right">Ver todos</a>
                 </div>
             </div>
         </div>
