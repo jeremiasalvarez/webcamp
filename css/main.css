@@ -324,7 +324,7 @@ p.slogan span {
 
 /*barra*/
 
-div.barra {
+.barra {
     background-color: #353535;
     padding: 20px 0;
 }
@@ -727,7 +727,7 @@ p.numero {
 .mapa {
     height: 350px;
     width: 100%;
-    background-color: green;
+    background-color: #f1f1f1;
 }
 
 

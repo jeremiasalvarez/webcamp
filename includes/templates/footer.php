@@ -48,14 +48,16 @@
         window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')
     </script>
     <script src="js/plugins.js"></script>
-    <script src="js/jquery.animateNumber.js"></script>
-    <script src="js/jquery.countdown.js"></script>
     <script src="js/jquery.lettering-0.6.1.min.js"></script>
-    <script src="node_modules/lightbox2/src/js/lightbox.js"></script>
-    <script src="js/registro.js"></script>
-    <script src="node_modules/jquery-colorbox/jquery.colorbox.js"></script>
-    <script src="js/invitados.js"></script>
-    <script src="js/main.js"></script>
+    <?php 
+        require_once './includes/functions/cargar_dependencias.php';
+        cargar_dependencias_footer();
+    ?>
+    
+    
+    
+    
+    
 
     <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
     <script>
