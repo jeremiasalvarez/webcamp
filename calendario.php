@@ -52,19 +52,22 @@
               echo utf8_encode(strftime("%A, %d de %B del %Y", strtotime($dia)));
             ?>
           </h3>
-          <?php foreach ($lista_eventos as $evento) { 
+          
+          <div class="contenedor-dias">
+            <?php foreach ($lista_eventos as $evento) { 
 
             $icono = $evento['icono'];
-            
-          ?>
-            <div class="dia">
-              <p class="titulo"> <?php echo $evento['titulo']; ?></p>
-              <p class="hora"> <i class="fa fa-clock" area-hidden="true"></i> <?php echo $evento['hora'] ?></p>
-              <p class="categoria"><i class= "<?php echo $icono; ?>"></i> <?php echo $evento['categoria']; ?> </p>
-              <p class="invitado"><i class="fa fa-user"></i> <?php echo $evento['invitado'] ?></p>
-              
-            </div>
-          <?php } ?>
+
+            ?>
+              <div class="dia">
+                <p class="titulo"> <?php echo $evento['titulo']; ?></p>
+                <p class="hora"> <i class="fa fa-clock" area-hidden="true"></i> <?php echo $evento['hora'] ?></p>
+                <p class="categoria"><i class= "<?php echo $icono; ?>"></i> <?php echo $evento['categoria']; ?> </p>
+                <p class="invitado"><i class="fa fa-user"></i> <?php echo $evento['invitado'] ?></p>
+                
+              </div>
+            <?php } ?>
+          </div>
       <?php } ?>
 
     </div>

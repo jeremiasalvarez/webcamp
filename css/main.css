@@ -1083,17 +1083,17 @@ h4 {
 
 /* Calendario */
 
-.calendario {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-}
-
-.calendario h3 {
+.calendario .fecha-calendario {
     text-align: center;
     background-color: #FE4918;
     color: white;
     padding: 10px 0;
     min-width: 100%;
+}
+
+.contenedor-dias {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
 }
 
 .dia {
@@ -1107,12 +1107,9 @@ h4 {
 }
 
 @media(min-width: 768px) {
-    .calendario {
+    .contenedor-dias {
         grid-template-columns: repeat(3, 33.3%);
         /* pueden usar 50% o 1fr */
-    }
-    .calendario h3 {
-        grid-column: 1/4;
     }
 }
 
@@ -1141,8 +1138,12 @@ h4 {
 
 /* Colorbox */
 
+#cboxContent {
+    border: 2px solid #f34918;
+}
+
 .invitado-colorbox {
-    padding: 30px!important;
+    padding: 20px!important;
     text-align: center;
 }
 
