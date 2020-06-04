@@ -132,24 +132,24 @@
             <p>Rafael Bautista</p>
         </li>
         <li class="invitado">
-            <img src="img/invitado1.jpg" alt="invitado">
-            <p>Gregorio Sanchez</p>
+            <img src="img/invitado2.jpg" alt="invitado">
+            <p>Shari Rivera</p>
         </li>
         <li class="invitado">
             <img src="img/invitado3.jpg" alt="invitado">
-            <p>Juan gomez</p>
+            <p>Gregorio Sanchez</p>
         </li>
         <li class="invitado">
             <img src="img/invitado4.jpg" alt="invitado">
-            <p>Carla gomez</p>
+            <p>Susana Rivera</p>
         </li>
         <li class="invitado">
             <img src="img/invitado5.jpg" alt="invitado">
-            <p>Rafael Bautista</p>
+            <p>Harold Garcia</p>
         </li>
         <li class="invitado">
             <img src="img/invitado6.jpg" alt="invitado">
-            <p>Rafael Bautista</p>
+            <p>Susan Gomez</p>
         </li>
     </ul>
 </section>
