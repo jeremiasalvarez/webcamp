@@ -53,6 +53,8 @@
     <script src="js/jquery.lettering-0.6.1.min.js"></script>
     <script src="node_modules/lightbox2/src/js/lightbox.js"></script>
     <script src="js/registro.js"></script>
+    <script src="node_modules/jquery-colorbox/jquery.colorbox.js"></script>
+    <script src="js/invitados.js"></script>
     <script src="js/main.js"></script>
 
     <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->

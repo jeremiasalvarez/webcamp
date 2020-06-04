@@ -1081,6 +1081,72 @@ h4 {
 }
 
 
+/* Calendario */
+
+.calendario {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.calendario h3 {
+    text-align: center;
+    background-color: #FE4918;
+    color: white;
+    padding: 10px 0;
+    min-width: 100%;
+}
+
+.dia {
+    width: 100%;
+    border: 2px solid #e1e1e1;
+    min-height: 240px;
+    padding-top: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
+    transition: all .3s ease;
+}
+
+@media(min-width: 768px) {
+    .calendario {
+        grid-template-columns: repeat(3, 33.3%);
+        /* pueden usar 50% o 1fr */
+    }
+    .calendario h3 {
+        grid-column: 1/4;
+    }
+}
+
+.dia:hover {
+    background-color: #e1e1e1;
+    -webkit-transform: scale(1.1);
+}
+
+.dia i {
+    color: #fe4918;
+    font-size: 1.5em;
+}
+
+.dia p {
+    font-size: 1em;
+    pointer-events: none;
+}
+
+.dia .titulo {
+    font-size: 1.1em;
+    color: #fe4918;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+
+/* Colorbox */
+
+.invitado-colorbox {
+    padding: 30px!important;
+    text-align: center;
+}
+
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
