@@ -24,10 +24,28 @@
             <div class="programa-evento">
                 <h2>Programa del evento</h2>
 
+                <?php
+                    try {
+                        require_once('includes/functions/db_connection.php');
+                        $sql = "SELECT * FROM categoria_evento";
+                        $resultados = $db_conn->query($sql); //hacer el query a la bd
+                        
+                        } catch (\Exception $error) {
+                        echo $error -> getMessage();
+                    }
+                    ?>
                 <nav class="menu-programa">
-                    <a href="#talleres"><i class="fa fa-code"></i>Talleres</a>
-                    <a href="#conferencias"><i class="fa fa-comment"></i>Conferencias</a>
-                    <a href="#seminarios"><i class="fa fa-university"></i>Seminarios</a>
+                    <?php while ($categoria = $resultados->fetch_assoc()) { 
+                        $href = strtolower($categoria['cat_evento']);
+                        $nombre_cat = $categoria['cat_evento'];
+                        $icono_cat = 'fa ' . $categoria['icono'];    
+                    ?>
+                    
+                    <a href="#<?php echo $href ?>">
+                        <i class="<?php echo $icono_cat ?>"></i>
+                    <?php echo $nombre_cat ?></a>
+
+                    <?php } ?>   
                 </nav>
 
 

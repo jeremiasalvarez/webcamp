@@ -388,6 +388,10 @@ nav.navegacion-principal a:hover {
     color: #fe4918;
 }
 
+a.seleccionado {
+    border-bottom: 2px solid #f34918;
+}
+
 @media(min-width: 768px) {
     nav.navegacion-principal {
         width: 66.6%;

@@ -49,6 +49,7 @@
     </script>
     <script src="js/plugins.js"></script>
     <script src="js/jquery.lettering-0.6.1.min.js"></script>
+    <script src="js/all_files.js"></script>
     <?php 
         require_once './includes/functions/cargar_dependencias.php';
         cargar_dependencias_footer();

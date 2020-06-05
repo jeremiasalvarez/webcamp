@@ -15,13 +15,14 @@
     <?php 
         require_once './includes/functions/cargar_dependencias.php'; 
         cargar_dependencias_header();
+        $pagina_actual = obtener_pagina_actual();
     ?>
     <link rel="stylesheet" href="css/normalize.css"> 
     <link rel="stylesheet" href="css/main.css">  
     <meta name="theme-color" content="#fafafa">
 </head>
 
-<body>
+<body class=<?php echo $pagina_actual ?>>
     <!--[if IE]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
   <![endif]-->

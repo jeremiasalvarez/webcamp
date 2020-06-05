@@ -1,9 +1,8 @@
 <?php 
     function cargar_dependencias_header() {
-        $archivo = basename($_SERVER['PHP_SELF']);
-        $pagina = str_replace('.php', "", $archivo);
+        $pagina_actual = obtener_pagina_actual();
 
-        switch($pagina) {
+        switch($pagina_actual) {
            case 'index':
             echo '<link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin="" />';
             echo '<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>';
@@ -19,10 +18,10 @@
     }
 
     function cargar_dependencias_footer() {
-        $archivo = basename($_SERVER['PHP_SELF']);
-        $pagina = str_replace('.php', "", $archivo);
 
-        switch($pagina) {
+        $pagina_actual = obtener_pagina_actual();
+
+        switch($pagina_actual) {
            case 'index':
             echo '<script src="js/jquery.animateNumber.js"></script>';
             echo '<script src="js/jquery.countdown.js"></script>';
@@ -40,5 +39,11 @@
             case 'registro':
                 echo '<script src="js/registro.js"></script>';     
         }
+    }
+
+    function obtener_pagina_actual(){
+        $archivo = basename($_SERVER['PHP_SELF']);
+        $pagina = str_replace('.php', "", $archivo);
+        return $pagina;
     }
 ?>
