@@ -48,37 +48,62 @@
                     <?php } ?>   
                 </nav>
 
+                <?php
+                try {
+                    require_once('includes/functions/db_connection.php');
+                    $sql = "SELECT evento_id, nombre_evento, fecha_evento, hora_evento, cat_evento, icono, nombre_invitado, apellido_invitado FROM eventos INNER JOIN categoria_evento ON eventos.id_cat_evento = categoria_evento.id_categoria INNER JOIN invitados ON eventos.id_inv = invitados.invitado_id AND eventos.id_cat_evento = 1 ORDER BY evento_id LIMIT 2;
+                    SELECT evento_id, nombre_evento, fecha_evento, hora_evento, cat_evento, icono, nombre_invitado, apellido_invitado FROM eventos INNER JOIN categoria_evento ON eventos.id_cat_evento = categoria_evento.id_categoria INNER JOIN invitados ON eventos.id_inv = invitados.invitado_id AND eventos.id_cat_evento = 2 ORDER BY evento_id LIMIT 2;
+                    SELECT evento_id, nombre_evento, fecha_evento, hora_evento, cat_evento, icono, nombre_invitado, apellido_invitado FROM eventos INNER JOIN categoria_evento ON eventos.id_cat_evento = categoria_evento.id_categoria INNER JOIN invitados ON eventos.id_inv = invitados.invitado_id AND eventos.id_cat_evento = 3 ORDER BY evento_id LIMIT 2;";
+                    $db_conn->multi_query($sql); 
+                } catch (\Exception $error) {
+                    echo $error -> getMessage();
+                }
+                ?>
 
-                <div id="talleres" class="info-curso ocultar clearfix">
-                    <div class="detalle-evento">
-                        <h3>HTML5, CSS3, JavaScript</h3>
-                        <p>
-                            <i class="fa fa-clock"></i> 16:00hrs
-                        </p>
-                        <p>
-                            <i class="fa fa-calendar"></i>18 de Diciembre de 2020
-                        </p>
-                        <p>
-                            <i class="fa fa-user"></i> Juan Pedro Gonzalez
-                        </p>
-                    </div>
+                <?php 
+                    do {
+                        $resultado = $db_conn->store_result();
+                        $row = $resultado->fetch_all(MYSQLI_ASSOC);         
+                ?>
+                
+                <?php $i = 0; ?>
+                <?php foreach ($row as $evento): ?>
+                    <?php 
+                        $categoria = strtolower($evento['cat_evento']);
+                        $titulo = $evento['nombre_evento'];
+                        $fecha = $evento['fecha_evento'];
+                        $hora = $evento['hora_evento'];
+                        $invitado = $evento['nombre_invitado'] ." ". $evento['apellido_invitado'];    
+                    ?>
+                    <?php if ($i % 2 == 0) { ?>
+                        <div id="<?php echo $categoria ?>" class="info-curso ocultar clearfix">
+                    <?php } ?>
 
-                    <div class="detalle-evento">
-                        <h3>Responsive Web Desing</h3>
-                        <p>
-                            <i class="fa fa-clock"></i> 19:00hrs
-                        </p>
-                        <p>
-                            <i class="fa fa-calendar"></i>18 de Diciembre de 2020
-                        </p>
-                        <p>
-                            <i class="fa fa-user"></i> Jose Pereira
-                        </p>
-                    </div>
+                            <div class="detalle-evento">
+                                <h3><?php echo $titulo ?></h3>
+                                <p>
+                                    <i class="fa fa-clock"></i> <?php echo $hora ?>
+                                </p>
+                                <p>
+                                    <i class="fa fa-calendar"></i><?php echo $fecha ?>
+                                </p>
+                                <p>
+                                    <i class="fa fa-user"></i> <?php echo $invitado ?>
+                                </p>
+                            </div>
+                    <?php if ($i % 2 == 1) { ?>
+                            <a href="calendario.php" class="button float-right">Ver todos</a>
+                        </div>
+                    <?php } ?>
 
-                    <a href="calendario.php" class="button float-right">Ver todos</a>
-                </div>
-                <div id="conferencias" class="info-curso ocultar clearfix">
+                <?php $i++; ?>    
+                <?php endforeach; ?>
+                <?php $resultado->free(); ?>
+                <?php  
+                    } while ($db_conn->more_results() && $db_conn->next_result()); 
+                
+                ?>
+                <!-- <div id="conferencias" class="info-curso ocultar clearfix">
                     <div class="detalle-evento">
                         <h3>Como ser Freelancer</h3>
                         <p>
@@ -135,7 +160,7 @@
                     </div>
 
                     <a href="calendario.php" class="button float-right">Ver todos</a>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
