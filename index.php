@@ -103,64 +103,6 @@
                     } while ($db_conn->more_results() && $db_conn->next_result()); 
                 
                 ?>
-                <!-- <div id="conferencias" class="info-curso ocultar clearfix">
-                    <div class="detalle-evento">
-                        <h3>Como ser Freelancer</h3>
-                        <p>
-                            <i class="fa fa-clock"></i> 15:00hrs
-                        </p>
-                        <p>
-                            <i class="fa fa-calendar"></i>18 de Diciembre de 2020
-                        </p>
-                        <p>
-                            <i class="fa fa-user"></i> Juan Pedro Gonzalez
-                        </p>
-                    </div>
-
-                    <div class="detalle-evento">
-                        <h3>Tips para crear tu primera Web</h3>
-                        <p>
-                            <i class="fa fa-clock"></i> 19:00hrs
-                        </p>
-                        <p>
-                            <i class="fa fa-calendar"></i>19 de Diciembre de 2020
-                        </p>
-                        <p>
-                            <i class="fa fa-user"></i> Jose Pereira
-                        </p>
-                    </div>
-
-                    <a href="calendario.php" class="button float-right">Ver todos</a>
-                </div>
-                <div id="seminarios" class="info-curso ocultar clearfix">
-                    <div class="detalle-evento">
-                        <h3>Diseño UX/UI</h3>
-                        <p>
-                            <i class="fa fa-clock"></i> 16:00hrs
-                        </p>
-                        <p>
-                            <i class="fa fa-calendar"></i>19 de Diciembre de 2020
-                        </p>
-                        <p>
-                            <i class="fa fa-user"></i> Juan Pedro Gonzalez
-                        </p>
-                    </div>
-
-                    <div class="detalle-evento">
-                        <h3>Diseño para Moviles</h3>
-                        <p>
-                            <i class="fa fa-clock"></i> 19:00hrs
-                        </p>
-                        <p>
-                            <i class="fa fa-calendar"></i>18 de Diciembre de 2020
-                        </p>
-                        <p>
-                            <i class="fa fa-user"></i> Jose Pereira
-                        </p>
-                    </div>
-
-                    <a href="calendario.php" class="button float-right">Ver todos</a>
-                </div> -->
             </div>
         </div>
     </div>

@@ -1,6 +1,5 @@
 //Campos datos de usuario
 
-
 let nombre = document.getElementById('nombre');
 
 let apellido = document.getElementById('apellido');
@@ -20,7 +19,11 @@ let regalo = document.getElementById('regalo');
 
 let calcular = document.getElementById('calcular');
 let errorDiv = document.getElementById('error');
+let totalPedido = document.getElementById('total_pedido');
 let registro = document.getElementById('btnRegistro');
+deshabilitarBotonPagar();
+
+
 let listaProductosElement = document.getElementById('lista-productos');
 let totalElement = document.getElementById('suma-total');
 
@@ -28,6 +31,8 @@ let totalElement = document.getElementById('suma-total');
 
 let camiseta = document.getElementById('camisa_evento');
 let etiqueta = document.getElementById('etiquetas');
+
+
 
 calcular.addEventListener('click', calcularMonto);
 
@@ -39,6 +44,20 @@ apellido.addEventListener('blur', controlarCampos);
 email.addEventListener('blur', controlarCampos);
 email.addEventListener('blur', controlarEmail);
 let errorEnCampo = false;
+
+
+function deshabilitarBotonPagar() {
+    registro.disabled = true;
+    registro.style.pointerEvents = "none";
+    registro.style.opacity = "50%";
+}
+
+function habilitarBotonPagar() {
+    registro.disabled = false;
+    registro.style.pointerEvents = "all";
+    registro.style.opacity = "100%";
+}
+
 
 function controlarCampos() {
 
@@ -164,6 +183,7 @@ function mostrarDias() {
 
 
 function calcularMonto(event) {
+
     event.preventDefault();
 
     if (regalo.value == null || regalo.value === "") {
@@ -172,6 +192,8 @@ function calcularMonto(event) {
 
         return;
     }
+
+    habilitarBotonPagar();
 
     let boletoDia = parseInt(paseDia.value, 10) || 0,
         boleto2Dias = parseInt(pase2Dias.value, 10) || 0,
@@ -216,6 +238,8 @@ function calcularMonto(event) {
     precio.innerText = `$${total}`;
 
     totalElement.appendChild(precio);
+
+    totalPedido.value = total;
 }
 
 
