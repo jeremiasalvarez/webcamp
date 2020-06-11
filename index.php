@@ -70,7 +70,7 @@
                 <?php foreach ($row as $evento): ?>
                     <?php 
                         $categoria = strtolower($evento['cat_evento']);
-                        $titulo = $evento['nombre_evento'];
+                        $titulo = utf8_encode($evento['nombre_evento']);
                         $fecha = $evento['fecha_evento'];
                         $hora = $evento['hora_evento'];
                         $invitado = $evento['nombre_invitado'] ." ". $evento['apellido_invitado'];    
