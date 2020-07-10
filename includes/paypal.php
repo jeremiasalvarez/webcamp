@@ -7,8 +7,8 @@ require 'paypal/autoload.php';
 
 $apiContext = new \PayPal\Rest\ApiContext(
     new \PayPal\Auth\OAuthTokenCredential(
-        'AfNQLdPxd8_tvjrwthHNA3yZhPLQAHen3DOO3elp0plEeR1v0o4C6lD7CrZ0griqVgmXCagkQHCJI1Uo',     // ClientID
-        'EOzWdTTQ0wd_6fkGiQ63O3GLLnvYbNWRXMpbA1WPoNNg7Rrn7KtbchvepIKbpcY8IUSa2TuB0fxj4agl'      // ClientSecret
+        'AdnZFct6iOHkJ8LuN-ZVLFeKZ7UrfT66F2JWO9de7qoQd2UCPUmHeaT-3ypCZ3-DcZIkaYl95EzyWE-n',     // ClientID
+        'EEAWy1A2h3XWzmsrsOvi8F2aYHZpzvUdUOONvRgCaRWfBzTJFchPC0R2VGjbXoVsv2PfFpHVMTdMLoXb'      // ClientSecret
    )
 );
 

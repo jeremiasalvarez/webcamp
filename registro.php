@@ -38,7 +38,8 @@
                         </ul>
                         <div class="orden">
                             <label for="pase_dia">Boletos Deseados</label>
-                            <input type="number" name="boletos[]" min="0" placeholder="0" size="3" id="pase_dia">
+                            <input type="number" name="boletos[un_dia][cantidad]" min="0" placeholder="0" size="3" id="pase_dia">
+                            <input type="hidden" value="30" name="boletos[un_dia][precio]">
                         </div>
 
                     </div>
@@ -56,7 +57,8 @@
 
                         <div class="orden">
                             <label for="pase_completo">Boletos Deseados</label>
-                            <input type="number" name="boletos[]" min="0" placeholder="0" size="3" id="pase_completo">
+                            <input type="number" name="boletos[completo][cantidad]" min="0" placeholder="0" size="3" id="pase_completo">
+                            <input type="hidden" value="50" name="boletos[completo][precio]">
                         </div>
                     </div>
                 </li>
@@ -73,7 +75,8 @@
 
                         <div class="orden">
                             <label for="pase_2_dias">Boletos Deseados</label>
-                            <input type="number" name="boletos[]" min="0" placeholder="0" size="3" id="pase_2_dias">
+                            <input type="number" name="boletos[dos_dias][cantidad]" min="0" placeholder="0" size="3" id="pase_2_dias">
+                            <input type="hidden" value="45" name="boletos[dos_dias][precio]">
                         </div>
                     </div>
                 </li>
@@ -163,11 +166,13 @@
                 <div class="extras">
                     <div class="orden">
                         <label for="camisa_evento">Camisa del evento $10 <small>(promocion 7% de descuento)</small></label>
-                        <input type="number" min="0" name="pedido_camisas" id="camisa_evento" placeholder="0" size="3">
+                        <input type="number" min="0" name="pedido_extra[camisa][cantidad]" id="camisa_evento" placeholder="0" size="3">
+                        <input type="hidden" name="pedido_extra[camisa][precio]" value="10">
                     </div>
                     <div class="orden">
                         <label for="etiquetas">Paquete de etiquetas $10 <small>(HTML5, CSS3, JavaScript, Chrome)</small></label>
-                        <input type="number" min="0" id="etiquetas" name="pedido_etiquetas" placeholder="0" size="3">
+                        <input type="number" min="0" id="etiquetas" name="pedido_extra[etiqueta][cantidad]" placeholder="0" size="3">
+                        <input type="hidden" name="pedido_extra[etiqueta][precio]" value="10">
                     </div>
 
                     <div class="orden">
