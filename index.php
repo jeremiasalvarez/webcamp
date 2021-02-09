@@ -8,10 +8,22 @@
         echo "<script>alert('Pago realizado correctamente')</script>";
     
     }
+
+    
 ?>
 
+<pre>
+<?php 
+
+    $db_host = getenv('DB_HOST');
+
+    echo "<h1>$db_host</h1>";
+?>
+</pre>
+
+
 <section class="contenedor seccion">
-    <h2>La mejor conferencia de diseño web en Español</h2>
+    <h2>La mejor conferencia de diseño web en Español <?php echo getenv('DB_HOST'); ?></h2>
     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic assumenda, accusamus consequatur, nulla placeat nostrum quaerat magnam mollitia sunt quo veniam amet modi impedit beatae, inventore doloremque commodi rerum quisquam!</p>
 </section>
 <section class="programa">
