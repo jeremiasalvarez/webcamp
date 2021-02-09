@@ -7,6 +7,8 @@ error_reporting(E_ALL);
    exit("hubo un error");
  }
  
+header("Location: index.php?pago=1");
+ 
 require 'includes/paypal.php';
 
 use PayPal\Api\Amount;

@@ -1,7 +1,7 @@
 <?php 
 
 //url aquispe
-define('URL_SITIO', 'http://localhost:81/webcamp');
+define('URL_SITIO', 'http://localhost/webcamp');
 
 require 'paypal/autoload.php';
 

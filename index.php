@@ -2,6 +2,13 @@
 <?php
   include_once 'includes/templates/header.php';
 ?>
+<?php 
+
+    if (isset($_GET['pago'])){
+        echo "<script>alert('Pago realizado correctamente')</script>";
+    
+    }
+?>
 
 <section class="contenedor seccion">
     <h2>La mejor conferencia de diseño web en Español</h2>
